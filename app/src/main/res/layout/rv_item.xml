@@ -1,0 +1,191 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/item_order_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        card_view:cardBackgroundColor="@color/Gainsboro"
+        card_view:cardCornerRadius="10dp">
+
+
+        <LinearLayout
+            android:id="@+id/bottom_wrapper"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent"
+            android:weightSum="1">
+
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/txt_vendor"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="0.15"
+                    android:hint="Select Vendor"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="#aaaaaa"
+                    android:textSize="13dp" />
+
+
+
+
+                <AutoCompleteTextView
+                    android:id="@+id/txt_driver"
+                    android:layout_width="fill_parent"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_weight="0.15"
+                    android:hint="Select Driver"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:textColor="@color/black"
+                    android:textColorHint="#aaaaaa"
+                    android:textSize="13dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:weightSum="1">
+
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+
+
+                        <EditText
+                            android:id="@+id/txt_helper"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="0.15"
+                            android:hint="No.of Helper"
+                            android:inputType="number"
+                            android:lines="1"
+                            android:padding="8dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="#aaaaaa"
+                            android:textSize="13dp" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/txt_installer"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="0.15"
+                            android:hint="No.of Installer"
+                            android:inputType="number"
+                            android:lines="1"
+                            android:padding="8dp"
+                            android:singleLine="true"
+                            android:textColor="@color/black"
+                            android:textColorHint="#aaaaaa"
+                            android:textSize="13dp" />
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_info1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:visibility="gone"
+                android:background="@drawable/round_corner_black"
+                android:weightSum="1">
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout_info2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:layout_margin="5dp"
+                android:visibility="gone"
+                android:background="@drawable/round_corner_black"
+                android:weightSum="1">
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/layout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                android:weightSum="1">
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:id="@+id/layout_costtovendor"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/text_deatils"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:text="Cost to Vendor"
+                        android:textAllCaps="true"
+                        android:textColor="@color/app_orange_dark"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:id="@+id/arrow"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/arrow_down" />
+
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
